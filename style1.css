@@ -6,6 +6,7 @@ body{
     max-width: 1024px;
     margin: auto;
          
+    
     display: grid;
     grid-template-areas:
         "header"
@@ -15,12 +16,10 @@ body{
     box-sizing: border-box;      
 }
 
-a{
-    text-decoration: none;
-}
 
 .header{
     background-color:lightblue;
+    display: inline;
       
 }
 
@@ -29,25 +28,26 @@ header{
     display: grid;
     grid-template-areas: "leftpage . navbar . rightpage";
     padding: 15px;
-    grid-gap: 10px;   
+    grid-gap: 10px;
+   
 }
-
-ul{
-    list-style-type: none;
-}
-
-.nested{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);  
+.navbar{
+    list-style: none;
+    padding: 0;
 
 }
-
-.nested > div{
+.navbar li{
+    float: left;
+}
+.navbar li a{
+    display: inline;
+    text-decoration: none;
     padding: 15px 20px;
     
 }
 
-.nested > div a:hover{
+
+.navbar li a:hover{
     background-color: coral;
 }
 
